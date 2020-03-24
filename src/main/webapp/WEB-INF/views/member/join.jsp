@@ -13,7 +13,6 @@
 	<!-- join page start -->
 	<div style="margin-top: 130px;"></div>
 	<div class="container">
-		<div class="card o-hidden border-0 shadow-lg my-5">
 			<div class="card-body p-0">
 				<!-- Nested Row within Card Body -->
 				<div class="row">
@@ -114,7 +113,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
 
 	<!-- join page end -->
 

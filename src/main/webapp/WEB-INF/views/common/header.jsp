@@ -43,7 +43,6 @@
   
 </head>
 
-
 <body>
    <!--::menu part start::-->
    <header class="main_menu home_menu">
@@ -51,7 +50,7 @@
          <div class="row">
             <div class="col-lg-12">
                <nav class="navbar navbar-expand-lg navbar-light">
-                  <a class="navbar-brand" href="main.go"> <img src="${contextPath}/resources/img/doit_logo.png" alt="logo"> </a>
+                  <a class="navbar-brand" href="main.go"> <img src="${pageContext.request.contextPath}/resources/img/doit_logo.png" alt="logo"> </a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                      <span class="navbar-toggler-icon"></span>
@@ -65,36 +64,30 @@
                            <a class="nav-link" href="#">about</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="#">Services</a>
+                           <a class="nav-link" href="#">Study</a>
                         </li>
                         <li class="nav-item dropdown">
                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              blog
+                              Community
                            </a>
                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="#">blog</a>
-                              <a class="dropdown-item" href="#">Single blog</a>
+                              <a class="dropdown-item" href="#">Notice</a>
+                              <a class="dropdown-item" href="#">Board</a>
+                              <a class="dropdown-item" href="#">Book-Share</a>
                            </div>
                         </li>
                         <li class="nav-item dropdown">
-                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              pages
-                           </a>
-                           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="#">Project</a>
-                              <a class="dropdown-item" href="#">Apartment</a>
-                              <a class="dropdown-item" href="#">Elements</a>
-                           </div>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="moveDefault.go">기본 폼</a>
+                           <a class="nav-link" href="#">Event</a>
                         </li>
                        	<li class="nav-item">
                          	<a class="nav-link" href=""></a>
                       	</li>
+                      	
                       	<c:if test="${ empty sessionScope.loginUser }">
+                      	    <li class="nav-item">
+                         		<a class="nav-link" style="margin-left:95px;"></a>
+                      		</li>
 	                     	<li class="nav-item">
 	                         	<a class="nav-link" href="moveLogin.go">LOGIN</a>
 	                      	</li>
@@ -103,18 +96,30 @@
 	                      	</li>
 	                      	<li>
                       	</c:if>
-                     	  <c:if test="${ !empty sessionScope.loginUser }">
+                      	<c:if test="${ !empty sessionScope.loginUser }">
+                      		<li>
+                      			<a class="nav-link"><label><span style="color:#d64748 !important;">${ loginUser.userName }</span>&nbsp;님</label></a>
+                      		</li>
+                      		<li class="nav-item">
+	                         	<a class="nav-link" href="myinfo.me">MYPAGE</a>
+                      		</li>
+                      		<li class="nav-item">
+	                         	<a class="nav-link" href="logout.do">LOGOUT</a>
+                      		</li>
+                      	</c:if>
+                     	  <%-- <c:if test="${ !empty sessionScope.loginUser }">
 					         <h3 align="right">
-					            <%-- <li class="nav-item">
-		                         	<label>${ loginUser.userName }님 환영합니다!!</label>
-		                      	</li> --%>
+					            <li class="">
+		                         	<label>${ loginUser.userName }님</label>
+		                      	</li>
 		                      	<li>
-					            <button onclick="location.href='myinfo.me'">마이페이지</button>
-					            <button onclick="location.href='logout.do'">로그아웃</button>
+		                      	<a class="nav-link" href="myinfo.me">정보수정</a>
+					            </li>
+					           	<li>
+		                      	<a class="nav-link" href="logout.do">로그아웃</a>
 					            </li>
 					         </h3>
-					      </c:if>
-                      	</li>
+					      </c:if> --%>
                      </ul>
                   </div>
                </nav>
