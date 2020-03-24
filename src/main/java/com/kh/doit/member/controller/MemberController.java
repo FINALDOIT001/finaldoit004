@@ -97,7 +97,7 @@ public class MemberController {
 //
 //		if (loginUser != null && bcryptPasswordEncoder.matches(m.getPwd(), loginUser.getPwd())) {
 //			model.addAttribute("loginUser", loginUser);
-//			return "redirect:index.jsp";
+//			return "redirect:main.go";
 //		} else if(loginUser != null && !(bcryptPasswordEncoder.matches(m.getPwd(), loginUser.getPwd()))) {
 //			model.addAttribute("msg","비밀번호를 틀렸습니다.");
 //			return "common/errorPage";
@@ -119,6 +119,19 @@ public class MemberController {
 		
 		return "redirect:main.go";
 	}
+	
+	
+	// 로그아웃용 컨트롤러
+//	@RequestMapping("logout.do")
+//	public String logout(SessionStatus status) {
+//		// 로그아웃 처리를 위해 커맨드 객체로 세션의 상태를 관리할 수 있는 SessionStatus 객체 필요
+//		
+//		// 세션의 상태를 확정지어주는 메소드
+//		status.setComplete(); // 로그아웃 처리
+//		
+//		return "redirect:main.go";
+//	}
+
 
 	
 }
