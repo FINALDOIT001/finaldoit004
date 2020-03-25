@@ -69,7 +69,7 @@
              </div>
          </div>
           <div class="col-lg-4">
-            <input type="button" class="genric-btn danger" style="float:right; width: 120px;" value="스터디 개설" />
+            <input type="button" class="genric-btn danger" style="float:right; width: 120px;" value="스터디 개설" onclick="location.href='studyInsert.go'"/>
           </div>
           <div class="col-lg-12" style="margin-top: 20px;">
              <label style="font-weight: bold;"><span style="font-size: large;">87</span>개의 스터디</label>
@@ -80,7 +80,7 @@
                      <img src="${contextPath}/resources/img/project-5.png" class="rounded" alt="Cinque Terre" style="width: 90px; height: 90px;">
                   </div>
                   <div class="col-md-9 mt-sm-20">
-                     <a href="doitStudyDetail.html" style="display: block;"><label style="font-size: x-large; font-weight: bold;">JAVA 스터디 그룹</label></a>
+                     <a href="studyDetail.go" style="display: block;"><label style="font-size: x-large; font-weight: bold;">JAVA 스터디 그룹</label></a>
                      <h5 class="mb-1 text-primary" style="font-weight: bold;">모집 중</h5>
                      <ul class="study_ul">
                         <li class="study_li">조장 : 박정호</li>
@@ -104,7 +104,7 @@
                      <img src="${contextPath}/resources/img/project-5.png" class="rounded" alt="Cinque Terre" style="width: 90px; height: 90px;">
                   </div>
                   <div class="col-md-9 mt-sm-20">
-                     <a href="doitStudyDetail.html" style="display: block;"><label style="font-size: x-large; font-weight: bold;">JAVA 스터디 그룹</label></a>
+                     <a href="studyDetail.go" style="display: block;"><label style="font-size: x-large; font-weight: bold;">JAVA 스터디 그룹</label></a>
                      <h5 class="mb-1 text-primary" style="font-weight: bold;">모집 중</h5>
                      <ul class="study_ul">
                         <li class="study_li">조장 : 박정호</li>

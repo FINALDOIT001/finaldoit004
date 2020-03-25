@@ -26,4 +26,40 @@ public class CommonController {
 	public String studyList() {
 		return "study/doitStudyList";
 	}
+	
+	/** 정호 스터디 디테일 링크
+	 * @return
+	 */
+	@RequestMapping("studyDetail.go")
+	public String studyDetail() {
+		return "study/doitStudyDetail";
+	}
+	
+	
+	/** 정호 스터디 인설트폼 링크
+	 * @return
+	 */
+	@RequestMapping("studyInsert.go")
+	public String studyInsert() {
+		return "study/doitStudyInsertFrom";
+	}
+	
+	
+	
+	/** 정호 스터디 인설트 스케쥴 폼 링크
+	 * @return
+	 */
+	@RequestMapping("studyInsertSc.go")
+	public String studyInsertSc() {
+		return "study/doitStudyInsertSchedule";
+	}
+	
+	
+	/** 정호 스터디 뒤테 스케  링크
+	 * @return
+	 */
+	@RequestMapping("studySc.go")
+	public String studySc() {
+		return "study/doitStudy_Schedule";
+	}
 }
