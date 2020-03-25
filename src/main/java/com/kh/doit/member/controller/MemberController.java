@@ -25,6 +25,8 @@ public class MemberController {
 //	private BCryptPasswordEncoder bcryptPasswordEncoder;
 
 	
+	
+	
 	/**
 	 * 로그인 화면으로 이동 Kwon
 	 * @return
