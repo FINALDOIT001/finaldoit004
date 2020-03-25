@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
-
+ 
 <head>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
@@ -72,9 +72,9 @@
                               Community
                            </a>
                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="#">Notice</a>
-                              <a class="dropdown-item" href="#">Board</a>
-                              <a class="dropdown-item" href="#">Book-Share</a>
+                              <a class="dropdown-item" href="moveNT.go">Notice</a>
+                              <a class="dropdown-item" href="moveFB.go">Board</a>
+                              <a class="dropdown-item" href="moveBS.go">Book-Share</a>
                            </div>
                         </li>
                         <li class="nav-item dropdown">

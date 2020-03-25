@@ -60,7 +60,7 @@ public class MemberController {
 		String encryptPwd = UserSha256.encrypt(m.getUserPwd());
 		System.out.println(encryptPwd);
 		m.setUserPwd(encryptPwd);
-		
+		 
 		return "redirect:main.go";
 	}
 	
