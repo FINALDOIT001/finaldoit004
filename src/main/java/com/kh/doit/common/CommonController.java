@@ -17,4 +17,13 @@ public class CommonController {
 		
 		return "common/form";
 	}
+	
+	
+	/** 정호 스터디 리스트 링크
+	 * @return
+	 */
+	@RequestMapping("studyList.go")
+	public String studyList() {
+		return "study/doitStudyList";
+	}
 }

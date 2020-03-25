@@ -58,13 +58,13 @@
                   <div class="collapse navbar-collapse main-menu-item" id="navbarNav">
                      <ul class="navbar-nav">
                         <li class="nav-item active">
-                           <a class="nav-link" href="main.go">homymymymymymymymy</a>
+                           <a class="nav-link" href="main.go">home</a>
                         </li>
                         <li class="nav-item">
                            <a class="nav-link" href="#">about</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="#">Study</a>
+                           <a class="nav-link" href="studyList.go">Study</a>
                         </li>
                         <li class="nav-item dropdown">
                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
