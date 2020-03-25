@@ -8,7 +8,7 @@ jQuery(function($){
         // 정렬 기능 숨기기
         ordering: true,
         // 정보 표시 숨기기
-        info: false,
+        info: true,
         // 페이징 기능 숨기기
         paging: true,
 
@@ -19,43 +19,74 @@ jQuery(function($){
     });
 
 
-    $("#test2").DataTable({
+    // study deatil 테이블명만 바꿔주자... 첫번째 칸에 input hidden으로 모임의 아이디값을 넣어준다.
+    var table = $("#kwon-table101").DataTable({
       lengthChange: false,
       searching: false,
       ordering: true,
-      info: false,
+      info: true,
       paging: true,
 
   });
 
+  $('#kwon-table101 tbody').on('click','tr',function() {
+     var test = $(this).children().eq(0).val();
+     alert(test);
+  });
+
 });
 
-$(".td1").on({
-    click:function(){
-       $(".btn1").click(function(){
-               //console.log($(this).parent().children().eq(0).text());
-               var marketId = $(this).parent().parent().children().eq(0).text();
-               location.href="<%=request.getContextPath()%>/selectMarketOne.ad?marketId=" + marketId;
-            });
-    }
- });
-$(function selectOne(){
-   $(".kwon-td1").click(function(){
-      console.log($(this).parent().children().eq(0).text());
-      location.href="kwon_detailForm.html";
-      // var marketId = $(this).parent().children().eq(0).text();
-      // location.href="<%=request.getContextPath()%>/selectMarketOne.ad?marketId=" + marketId;      
-   });
+// $(".td1").on({
+//     click:function(){
+//        $(".btn1").click(function(){
+//                //console.log($(this).parent().children().eq(0).text());
+//                var marketId = $(this).parent().parent().children().eq(0).text();
+//                location.href="<%=request.getContextPath()%>/selectMarketOne.ad?marketId=" + marketId;
+//             });
+//     }
+//  });
+// $(function selectOne(){
+//    $(".kwon-td1").click(function(){
+//       console.log($(this).parent().children().eq(0).text());
+//       location.href="kwon_detailForm.html";
+//       // var marketId = $(this).parent().children().eq(0).text();
+//       // location.href="<%=request.getContextPath()%>/selectMarketOne.ad?marketId=" + marketId;      
+//    });
+// });
+
+// $(function selectOne(){
+//    $(".kwon-td101").click(function(){
+//       console.log($(this).parent().children().eq(0).text());
+//       location.href="doitStudy_Schedule.html";
+//       // var marketId = $(this).parent().children().eq(0).text();
+//       // location.href="<%=request.getContextPath()%>/selectMarketOne.ad?marketId=" + marketId;
+//    });
+// });
+
+$(".kwon-span01").on({
+   click:function(){
+      $(".kwon-td1").click(function(){
+         console.log($(this).parent().children().eq(0).text());
+         var marketId = $(this).parent().parent().children().eq(0).text();
+         // location.href="<%=request.getContextPath()%>/selectMarketDetail.ad?marketId=" + marketId;
+         location.href="bsView.go";
+      });
+   }
 });
 
-$(function selectOne(){
-   $(".kwon-td101").click(function(){
-      console.log($(this).parent().children().eq(0).text());
-      location.href="doitStudy_Schedule.html";
-      // var marketId = $(this).parent().children().eq(0).text();
-      // location.href="<%=request.getContextPath()%>/selectMarketOne.ad?marketId=" + marketId;
-   });
-});
+// $(".kwon-span101").on({
+//    click:function(){
+//       $(".kwon-td101").click(function(){
+//          // console.log($(this).parent().children().eq(0).val());
+//          var marketId = $(this).parent().parent().children().input.val();
+//          console.log(marketId);
+//          alert('왜 알람이 안됩니까!');
+//             //   location.href="<%=request.getContextPath()%>/selectMarketDetail.ad?marketId=" + marketId;
+//          location.href="doitStudy_Schedule.html";
+//       });
+//    }
+// });
+
 
  /* required 체크해서 필수항목이 없을 경우 return false로 submit 막아주는 기능 */
 //  function manualValidate(ev) {
@@ -67,15 +98,17 @@ $(function selectOne(){
 
 
 $('#kwon-inst-btn01').click(function() {
-  location.href="kwon_insertForm.html";
+  location.href="bsInsert.go";
 });
 
 $('#kwon-btn02').click(function() {
-   location.href="kwon_updateForm.html";
+   location.href="bsUpdate.go";
 });
 
 $('#kwon-back01').click(function() {
   window.history.back();
 });
+
+
 
 
