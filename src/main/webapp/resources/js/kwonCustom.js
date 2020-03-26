@@ -31,7 +31,7 @@ jQuery(function($){
 
   $('#kwon-table101 tbody').on('click','tr',function() {
      var test = $(this).children().eq(0).val();
-     alert(test);
+     console.log('id값 찾기 위한 번호 : '+test);
   });
 
 });

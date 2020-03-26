@@ -9,12 +9,6 @@
 
 
 
-<!-- Kwon CSS -->
-<link rel="stylesheet" href="${contextPath}/resources/css/kwonCustom.css">
-<script src="${contextPath}/resources/js/kwonCustom.js"></script>
-<!-- jung  -->
-<link rel="stylesheet" href="${contextPath}/resources/css/jungho.css">
-<script src="${contextPath}/resources/js/jungho.js"></script>
 
 <style>
 
@@ -40,6 +34,14 @@
 
 
 <jsp:include page="../common/header.jsp" />
+
+	<!-- Kwon CSS -->
+	<link rel="stylesheet" href="${contextPath}/resources/css/kwonCustom.css">
+	<!-- jung  -->
+	<link rel="stylesheet" href="${contextPath}/resources/css/jungho.css">
+	<!-- 데이타테이블 CSS -->
+	<link rel="stylesheet" href="${contextPath}/resources/css/datatables.css">
+
 
 
 	<!-- Start Align Area -->
@@ -184,9 +186,8 @@
 
 						<div>
 
-							<table id="test2" class="table table-bordered">
+							<table id="kwon-table101" class="table table-bordered">
 								<thead class="kwon-thead101">
-									<tr class="kwon-tr1" onclick="location.href='studySc.go'">
 										<th width="10%" class="th101">모임일자</th>
 										<th width="10%" class="th101">시간</th>
 										<th width="10%" class="th101">지역</th>
@@ -198,6 +199,7 @@
 								</thead>
 								<tbody>
 									<tr class="kwon-tr1" onclick="location.href='studySc.go'">
+										<input type="hidden" value="모임의 아이디 값1" name="아이디 네임">
 										<td class="kwon-td101">2020.03.11</td>
 										<td class="kwon-td101">PM 18:00</td>
 										<td class="kwon-td101">강남</td>
@@ -207,6 +209,7 @@
 										<td class="kwon-td101">0/10</td>
 									</tr>
 									<tr class="kwon-tr1"  onclick="location.href='studySc.go'">
+										<input type="hidden" value="모임의 아이디 값2" name="아이디 네임">
 										<td class="kwon-td101">2020.03.12</td>
 										<td class="kwon-td101">PM 18:00</td>
 										<td class="kwon-td101">강남</td>
@@ -216,6 +219,7 @@
 										<td class="kwon-td101">9/10</td>
 									</tr>
 									<tr class="kwon-tr1"  onclick="location.href='studySc.go'">
+										<input type="hidden" value="모임의 아이디 값3" name="아이디 네임">
 										<td class="kwon-td101">2020.03.13</td>
 										<td class="kwon-td101">PM 18:00</td>
 										<td class="kwon-td101">강남</td>
@@ -268,6 +272,14 @@
 			return false;
 		});
 	</script>
+	
+
+	<!-- dataTables js -->
+	<script src="${contextPath}/resources/js/datatables.js"></script>
+	<script src="${contextPath}/resources/js/kwonCustom.js"></script>
+	<script src="${contextPath}/resources/js/jungho.js"></script>
+	
+	
 
 
 </body>

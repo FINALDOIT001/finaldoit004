@@ -6,42 +6,29 @@
 <head>
 <meta charset="UTF-8">
 <title>DoitStudyDtail</title>
+<style>
+* {
+	font-family: 'Noto Sans KR', sans-serif;
+}
 
-
-
-
-<!-- 데이타테이블 CSS -->
-<link rel="stylesheet" href="css/datatables.css">
-<script src="js/datatables.js"></script>
-
-
-<link rel="stylesheet" href="css/jungho.css">
-<link rel="stylesheet" href="css/kwonCustom.css">
-<script src="js/kwonCustom.js"></script>
-<script src="js/jungho.js"></script>
-
-
-
-<!-- include summernote js -->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-	crossorigin="anonymous"></script>
-<link
-	href="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote-lite.min.css"
-	rel="stylesheet">
-<script
-	src="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote-lite.min.js"></script>
-
-<script type="text/javascript"
-	src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=YOUR_CLIENT_ID"></script>
-<script
-	src="https://cdn.jsdelivr.net/npm/summernote@0.8.15/dist/summernote-lite.min.js"></script>
+.note-toolbar {
+	display: none;
+}
+</style>
 
 </head>
 
 <body>
 
 	<jsp:include page="../common/header.jsp" />
+	
+	<!-- 데이타테이블 CSS -->
+	<link rel="stylesheet" href="${contextPath}/resources/css/datatables.css">
+	<link rel="stylesheet" href="${contextPath}/resources/css/jungho.css">
+	<link rel="stylesheet" href="${contextPath}/resources/css/kwonCustom.css">
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote-lite.min.css" rel="stylesheet">
+	
+	
 
 
 	<!-- Start Align Area -->
@@ -88,12 +75,14 @@
 								style="width: 105%; margin-left: 0px;">
 								<ul class="checkuser">
 									<li><div class="checkuserdiv">
-											<img src="${contextPath}/resources/img/client_2.png" class="rounded-circle "
-												style="height: 70px;" alt="Cinque Terre">박정호
+											<img src="${contextPath}/resources/img/client_2.png"
+												class="rounded-circle " style="height: 70px;"
+												alt="Cinque Terre">박정호
 										</div></li>
 									<li><div class="checkuserdiv">
-											<img src="${contextPath}/resources/img/client_1.png" class="rounded-circle "
-												style="height: 70px;" alt="Cinque Terre">케빈
+											<img src="${contextPath}/resources/img/client_1.png"
+												class="rounded-circle " style="height: 70px;"
+												alt="Cinque Terre">케빈
 										</div></li>
 
 
@@ -141,7 +130,7 @@
 										<div class="d-flex justify-content-between">
 											<div class="d-flex align-items-center">
 												<div class="thumb">
-													<img src="img/comment/comment_1.png" alt=""
+													<img src="${contextPath}/resources/img/comment/comment_1.png" alt=""
 														style="width: 55px; height: 55px;">
 												</div>
 
@@ -167,7 +156,7 @@
 										<div class="d-flex justify-content-between">
 											<div class="d-flex align-items-center">
 												<div class="thumb">
-													<img src="img/comment/comment_2.png" alt=""
+													<img src="${contextPath}/resources/img/comment/comment_2.png" alt=""
 														style="width: 55px; height: 55px;">
 												</div>
 												<h5>
@@ -192,7 +181,7 @@
 										<div class="d-flex justify-content-between">
 											<div class="d-flex align-items-center">
 												<div class="thumb">
-													<img src="img/comment/comment_3.png" alt=""
+													<img src="${contextPath}/resources/img/comment/comment_3.png" alt=""
 														style="width: 55px; height: 55px;">
 												</div>
 												<h5>
@@ -277,7 +266,31 @@
 		var map = new naver.maps.Map('map', mapOptions);
 
 		</script>
+		
+		
+		
 		<jsp:include page="../common/footer.jsp" />
+
+
+
+
+<!-- include summernote js -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote-lite.min.js"></script>
+
+<script type="text/javascript"
+	src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=YOUR_CLIENT_ID"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/summernote@0.8.15/dist/summernote-lite.min.js"></script>
+		<script src="${contextPath}/resources/js/kwonCustom.js"></script>
+		<script src="${contextPath}/resources/js/jungho.js"></script>
+
+		<script src="${contextPath}/resources/js/datatables.js"></script>
 </body>
+
+
 
 </html>
