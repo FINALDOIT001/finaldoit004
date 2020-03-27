@@ -134,6 +134,9 @@ public class MemberController {
 //		return "redirect:main.go";
 //	}
 
-
+	@RequestMapping("myinfo.me")
+	public String myPage() {
+		return "member/myPage";
+	}
 	
 }
