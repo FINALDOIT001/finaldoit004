@@ -19,13 +19,6 @@ public class CommonController {
 	}
 	
 	
-	/** 정호 스터디 리스트 링크
-	 * @return
-	 */
-	@RequestMapping("studyList.go")
-	public String studyList() {
-		return "study/doitStudyList";
-	}
 	
 	/** 정호 스터디 디테일 링크
 	 * @return

@@ -10,6 +10,7 @@
 	<!-- typeAliases -->
 	<typeAliases>
 		<typeAlias type="com.kh.doit.member.model.vo.Member" alias="Member"/>
+		<typeAlias type="com.kh.doit.study.model.vo.StudyGroup" alias="StudyGroup"/>
 	</typeAliases>
 	
 	<!-- DB정보를 썼던 부분 
@@ -19,8 +20,10 @@
 	-->
 	
 	<!-- mapper 설정 -->
+	
 	<mappers>
 		<mapper resource="mappers/member-Mapper.xml"/>
+		<mapper resource="mappers/StudyGroup-Mapper.xml"/>
 	</mappers>
 	
 </configuration>

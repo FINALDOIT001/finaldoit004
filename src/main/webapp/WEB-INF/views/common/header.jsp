@@ -38,7 +38,7 @@
 	<!-- summernote -->
 	<link rel="stylesheet" href="${contextPath}/resources/plugins/summernote/summernote-bs4.css">
 	<style>
-		body{font-family: 'Noto Sans KR', sans-serif;}
+		*{font-family: 'Noto Sans KR', sans-serif;}
 	</style>
   
 </head>
@@ -64,7 +64,8 @@
                            <a class="nav-link" href="#">about</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="studyList.go">Study</a>
+                        <c:url var="sglist" value="sgList.go"/>
+                           <a class="nav-link" href="${sglist}">Study</a>
                         </li>
                         <li class="nav-item dropdown">
                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"

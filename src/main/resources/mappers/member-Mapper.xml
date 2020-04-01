@@ -5,18 +5,18 @@
 <mapper namespace="memberMapper">
     
    	<resultMap id="memberResultSet" type="Member">
-		<id property="mId" column="MID"/>
-		<result property="userId" column="USERID"/>
-		<result property="userPwd" column="USERPWD"/>
-		<result property="userName" column="USERNAME"/>
+		<id property="mId" column="M_NO"/>
+		<result property="userId" column="M_ID"/>
+		<result property="userPwd" column="M_PWD"/>
+		<result property="userName" column="M_NAME"/>
     </resultMap>
     
     <select id="loginMember" parameterType="Member" 
     resultMap="memberResultSet">
     	SELECT	*
-   		FROM	DOIT_MEMBER
-   		WHERE	USERID=#{userId}
-   		AND		USERPWD=#{userPwd}
+   		FROM	MEMBER
+   		WHERE	M_ID=#{userId}
+   		AND		M_PWD=#{userPwd}
    		<!-- AND		M_STATUS='Y' -->
     </select>
 </mapper>
