@@ -20,12 +20,8 @@ public class MemberDao {
 	 * @return
 	 */
 	public Member loginMember(Member m) {
-		
-		System.out.println("Dao member : " + m);
-		Member loginUser = (Member)sqlSession.selectOne("memberMapper.loginMember",m);
-				
-		System.out.println("Dao 로그인 유저 : " + loginUser);
-		return loginUser;
+	
+		return (Member)sqlSession.selectOne("memberMapper.loginMember",m);
 	}
 
 }

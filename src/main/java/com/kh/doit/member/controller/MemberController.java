@@ -5,14 +5,17 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.kh.doit.member.model.service.MemberService;
 import com.kh.doit.member.model.vo.Member;
 import com.kh.doit.util.UserSha256;
 
+@SessionAttributes("loginUser")
 
 @Controller
 public class MemberController {
@@ -73,22 +76,22 @@ public class MemberController {
 	 * @return
 	 */
 	@RequestMapping(value="login.me", method={RequestMethod.GET, RequestMethod.POST})
-	public String memberLogin(@ModelAttribute Member m, HttpSession session) {
-		
-		System.out.println("Servlet 기존 암호확인 : " + m.getUserPwd());
-		
-		// 암호화 시작
-		String encryptPwd = UserSha256.encrypt(m.getUserPwd());
-		System.out.println("Servlet 암호화 된 암호 : " + encryptPwd);
-		m.setUserPwd(encryptPwd);
+	public String memberLogin(@ModelAttribute Member m, Model model) {
 		
 		// 비즈니스 로직으로 이동
 		Member loginUser = mService.memberLogin(m);
-		System.out.println("Servlet 로그인 유저 : " + loginUser);
 		
-		session.setAttribute("loginUser", loginUser);
-
-		return "redirect:main.go";
+		if( loginUser != null ) {
+			
+			model.addAttribute("loginUser", loginUser);
+			return "redirect:main.go";
+			
+		}else {
+			
+			model.addAttribute("msg","로그인 실패!");
+			return "common/errorPage";
+			
+		}
 	}
 	
 	// 복호화 암호 처리

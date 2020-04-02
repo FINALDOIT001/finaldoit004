@@ -11,8 +11,7 @@
 		<result property="userName" column="M_NAME"/>
     </resultMap>
     
-    <select id="loginMember" parameterType="Member" 
-    resultMap="memberResultSet">
+    <select id="loginMember" parameterType="Member" resultMap="memberResultSet">
     	SELECT	*
    		FROM	MEMBER
    		WHERE	M_ID=#{userId}

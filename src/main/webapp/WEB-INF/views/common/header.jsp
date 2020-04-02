@@ -156,20 +156,7 @@
 									<a class="dropdown-item text-center small text-gray-500" href="#">Show All Messages</a>
 								</div>
 							</li>
-                      		
-
-                      		
-                      		
-                      		
-                      		
-                      		
-                      		
-                      		
-                      		
-                      		
-                      		
-                      	
-                      	
+              
                       		<li>
                       			<a class="nav-link"><label><span style="color:#d64748 !important;">${ loginUser.userName }</span>&nbsp;님</label></a>
                       		</li>
@@ -180,6 +167,10 @@
 	                         	<a class="nav-link" href="logout.do">LOGOUT</a>
                       		</li>
                       	</c:if>
+                      	
+                      	
+                      	
+                      	
                       	<c:if test="${ !empty sessionScope.loginUser && (sessionScope.loginUser.mId == 0) }">
                       		<li>
                       			<a class="nav-link"><label><span style="color:#d64748 !important;">${ loginUser.userName }</span>&nbsp;님</label></a>

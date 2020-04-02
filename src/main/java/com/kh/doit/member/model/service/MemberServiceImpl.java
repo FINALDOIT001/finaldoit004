@@ -28,14 +28,8 @@ public class MemberServiceImpl implements MemberService {
 	
 	@Override
 	public Member memberLogin(Member m) {
-		
-		System.out.println("Service member : " + m);
-		
-		Member loginUser = mDao.loginMember(m);
-		
-		System.out.println("Service 로그인 member : " + loginUser);
-		
-		return loginUser;
+
+		return mDao.loginMember(m);
 	}
 	
 	
