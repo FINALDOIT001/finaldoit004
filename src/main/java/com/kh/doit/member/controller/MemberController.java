@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.support.SessionStatus;
 
 import com.kh.doit.member.model.service.MemberService;
 import com.kh.doit.member.model.vo.Member;
@@ -67,8 +68,6 @@ public class MemberController {
 		return "redirect:main.go";
 	}
 	
-	
-	
 	/**
 	 * 로그인 Kwon
 	 * @param m
@@ -119,8 +118,9 @@ public class MemberController {
 	 * @return
 	 */
 	@RequestMapping("logout.do")
-	public String memberLogout(HttpSession session) {
-		session.invalidate();
+	public String memberLogout(SessionStatus status) {
+		
+		status.setComplete();
 		
 		return "redirect:main.go";
 	}
